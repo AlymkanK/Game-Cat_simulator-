@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>имя кота - {{ name }}</h1>
+<p>Возраст - {{ age }}</p>
+<p>Сытость - {{ satiety }}</p>
+<p>Счастье - {{ happiness }}</p>
+<img src="{% static image %}" alt="">
+
+<form action="/cat_stats/" method="post">
+    {% csrf_token %}
+    <select name="action" id="action">
+        <option value="play">играть</option>
+        <option value="feed">кормить</option>
+        <option value="sleep">спать</option>
+    </select>
+    <button type="submit">Выбрать</button>
+</form>
+</body>
+</html>
