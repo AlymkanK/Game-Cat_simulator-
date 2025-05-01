@@ -15,7 +15,7 @@ class Cat:
     @classmethod
     def put_limits(cls):
         try:
-            if cls.happiness > 100 or cls.satiety > 100:
+            if cls.happiness > 120 or cls.satiety > 100:
                 raise ValueError('Показания превысили 100')
         except:
             print('Обрабатываю данные')
