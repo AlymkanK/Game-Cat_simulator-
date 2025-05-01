@@ -63,3 +63,6 @@ class Cat:
     @classmethod
     def sleep(cls):
         cls.image_display()
+
+    def cheer_up(cls):
+        cls.image_display()
